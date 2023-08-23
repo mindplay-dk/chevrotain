@@ -105,6 +105,16 @@
                        href="https://github.com/Chevrotain/chevrotain/blob/gh-pages/performance/jsonParsers/ohm/ohm_json_parser.js">parser</a>
                 </p></li>
 
+                <li><p>
+                    <a rel="nofollow" href="https://sigma.vm.codes/">Sigma</a> Parser Library
+                    TODO add links
+                    <a rel="nofollow"
+                       href="https://github.com/Chevrotain/chevrotain/blob/gh-pages/performance/jsonParsers/ohm/ohm_json_grammar.js">grammar</a>
+                    ->
+                    <a rel="nofollow"
+                       href="https://github.com/Chevrotain/chevrotain/blob/gh-pages/performance/jsonParsers/ohm/ohm_json_parser.js">parser</a>
+                </p></li>
+
             </ol>
 
             <p>
@@ -263,6 +273,18 @@
                         <div class="benchInclude"><input type="checkbox"/></div>
 
                     </div>
+                    
+                    <div class="dataRow Sigma">
+
+                        <div class="benchName"><a rel="nofollow" href="https://sigma.vm.codes/">Sigma</a></div>
+                        <div class="benchRate">
+                            <div class="value">&nbsp;</div>
+                            <div class="delta">&nbsp;</div>
+                        </div>
+                        <div class="benchSpeed">&nbsp;</div>
+                        <div class="benchInclude"><input type="checkbox"/></div>
+
+                    </div>
                 </div>
             </div>
             <canvas id="parsersResultChart"></canvas>
@@ -293,6 +315,7 @@
     var parsimmonFrame = includeTestIFrame("parsimmon", "./jsonParsers/parsimmon/parsimmon.html")
     var pegjsFrame = includeTestIFrame("pegjs", "./jsonParsers/pegjs/pegjs.html")
     var peggyFrame = includeTestIFrame("peggy", "./jsonParsers/peggy/peggy.html")
+    var sigmaFrame = includeTestIFrame("sigma", "./jsonParsers/sigma/sigma.html")
 
     $("iframe").css("visibility", "hidden")
 
@@ -440,6 +463,10 @@
 
         Ohm: function (suite) {
             addTest(suite, 'Ohm', ohmFrame.parse)
+        },
+
+        Sigma: function (suite) {
+            addTest(suite, 'Sigma', sigmaFrame.parse)
         }
     }
 
